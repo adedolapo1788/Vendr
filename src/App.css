@@ -47,9 +47,10 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
 }
 .form-field{
   background-color: #ffffff;
+  width: 94%;
 }
 .form-look {
-  padding: 20px;
+  padding: 10px;
 }
 .form-box{
   display: flex;
@@ -135,11 +136,10 @@ width: 70%;
 }
 .bg-footer-header{
   background-color:#135053;
-  height: 65vh;
+  height: auto;
 }
 .jumbo {
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
   border-radius: .3rem;
   position: relative;
 }
@@ -180,16 +180,11 @@ width: 70%;
 
 }
 .wd{
-  word-break: break-all;
+  word-break: break-word
 }
 .responsive-img{
   width: 100%;
   border-radius: 25px;
-}
-@media only screen and (min-width:1440px){
-  .bg-height {
-    height: 70vh;
-  }
 }
 .dl-btn {
   padding: 11px;
@@ -214,6 +209,9 @@ width: 70%;
   }
   .h1-change {
     font-size: 2rem !important;
+  }
+  .moblie-m{
+    margin: 0px;
   }
 }
 .op-btn {
@@ -262,14 +260,14 @@ img.img-change {
 }
 @media only screen and (width :768px){
 img.img-change {
-  right: 30px;
+  right: -43px;
 } 
 }
 
 @media only screen and (max-width:620px) {
   img.img-change {
     position: relative;
-    right: 20px;
+    right: 30px;
     top: 20px;
   }
   
@@ -307,6 +305,9 @@ color: #FFE01B;
 .foot-desc > a {
   text-decoration: none;
   color: #FDFBFB;
+}
+a:hover {
+text-decoration: none;
 }
 .d-stroke {
   margin-top: -8px;
@@ -352,8 +353,13 @@ img.dot-stroke {
 .dds {
   display: flex;
   justify-content: flex-end;
-  width: 45%;
+  width: 40%;
   
+}
+@media only screen and (min-width:2453px){
+  .dds{
+    width:38%
+  }
 }
 .email-form {
   max-width: 50%;
@@ -372,7 +378,7 @@ img.sos {
 }
 .email-form {
   max-width: 100%;
-  flex: 1 0 50%;
+  flex: 1 0 95%;
   padding: 0px 10px;
 
 }
@@ -402,11 +408,21 @@ img.sos {
   width: 100%;
 }
 }
-@media only screen and (max-width:662px){
+@media only screen and (max-width:540px){
   div#my-carousel {
   display: none !important
   }
   .bg-height {
     height: 84vh;
+  }
+}
+@media only screen and (min-width :1024px){
+  .form-field {
+    width: 80%;
+  }
+}
+@media only screen and (max-width : 768px){
+  .dds {
+    width: 50%;
   }
 }

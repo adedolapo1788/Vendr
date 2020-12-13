@@ -102,3 +102,132 @@ p.da{
     display: flex;
     justify-content: flex-end;
 }
+.create-menu {
+	justify-content: space-between;
+	
+}
+.jumbocolor {
+	background-color: #ffffff !important;
+}
+@media only screen and (max-width:767px){
+	/*.jumbocolor{
+		display: none
+	}*/
+	.form-flex{
+		justify-content: normal;
+	}
+}
+/*@media only screen and (min-width:767px){
+.moblie {
+	display: none;
+}
+}*/
+.w-fles {
+	width: 20%;
+}
+.checkbox-menu {
+	display: flex;
+}
+.checkbox-menu:hover{
+	cursor: pointer;
+
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	
+}
+.color-menu {
+	background-color: #EEEEEE;
+	
+	border-radius: 25px;
+}
+.content.col-md-2 {
+    padding: 0px !important;
+}
+.color-menu > .content {
+	border-width: 0 0 1px;
+}
+.content > .color-menu {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.hr-u {
+	border-top: 1px solid;
+}
+.more-meals {
+	text-align: center;
+}
+.img-food-menu{
+	width: 224px;
+height: 174px;
+	border-radius: 19px;
+}
+.color-tab{
+	border-radius: 25px;
+	background-color:#EEEEEE;
+}
+@media (min-width: 768px){
+.content.col-md-2 {
+    flex: 0 0 20% ;
+    max-width: 20% ;
+}
+}
+.mk-changes {
+	width: 95%;
+	border-color:  black;
+}
+@media (max-width:992px){
+	.img-food-menu{
+		width: 157px;
+	}
+	.mk-border.mt-3.col-md-4.col-sm-8 {
+		margin-top: 0px !important;
+	}
+	
+}
+@media  (max-width :768px){
+	
+.ktchen{
+	padding-top: 0px !important;
+}
+}
+@media (max-width: 576px){
+.col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-md-4.col-sm-6 {
+    flex: 0 0 100%;
+    text-align: center;
+}
+.ktchen {
+    padding-top: 1rem !important;
+}
+}
+.mk-border {
+	border-left: 1px solid black;
+}
+@media (max-width:765px){
+	.mk-border {
+		border-left: none
+	}
+	.details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.content.col-md-2 {
+		margin: 2rem ;
+	}
+}
+@media only screen and (max-width: 540px){
+.bg-height-nav {
+    height: 66vh !important;
+}
+}
+.header-row {
+    display: flex;
+	justify-content: space-between;
+	padding: 0px 10px;
+}
