@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import {Provider} from 'react-redux'
+import configureStore from './store/configureStore';
 import './index.css';
 import App from './App';
 
 import reportWebVitals from './reportWebVitals';
-
+const store = configureStore()
 ReactDOM.render(
   <React.StrictMode>
+    
+  <Provider store={store}>
     <App />
-    </React.StrictMode>,
+    </Provider>
+    </React.StrictMode>
+     ,
   document.getElementById('root')
 );
 
