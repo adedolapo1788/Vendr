@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import {Link} from 'react-router-dom'
-import Succeed from '../Image/Group 207.svg'
+import Succeed from '../Image/assests/Group 207.svg'
 import FoodNav from './FoodNav'
-import Footer from './FooterOrder'
+import Footer from './Footer/FooterOrder'
 const Success = () => {
+    const sucess = true
+
     return(
         <>
-        <FoodNav/>
+        <FoodNav Succeeded={sucess}/>
         <div className="success-message">
 
                 <img src={Succeed} alt="sucess"/>

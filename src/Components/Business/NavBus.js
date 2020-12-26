@@ -1,25 +1,22 @@
 import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
+import Logo from '../../Image/vendr..svg'
 import { showModalLogin, showModalSignup } from '../../store/actionTypes'
 
-const NavBus = () => {
-    //const logo = [V, E, N, D, R, Dot]
+
+const NavBus = (props) => {
     const dispatch = useDispatch()
 
 	const LoginHandler = () => {
-       console.log('loading')
+       dispatch(showModalLogin())
 	}
 
-	const SignupHandler = () => {
-		console.log('working')
-	}    
     return (
 		<>
-			<Navbar collapseOnSelect className="nav-bus" variant="light" expand="lg">
-				
-                <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/">
-               Vendr.     </Navbar.Brand>
+			<Navbar collapseOnSelect className={props.style ? props.style : "nav-bus"} variant="light" expand="lg">
+                <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/merchant">
+               <img src={Logo} alt="vendr"/>  </Navbar.Brand>
                     
 				<Navbar.Toggle  aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
@@ -33,7 +30,7 @@ const NavBus = () => {
 					</div>
 					<br />
                     <div>
-					<Nav.Item className=" mr-5 log-btn " onClick={SignupHandler}>
+					<Nav.Item className=" mr-5 log-btn ">
 						Help
 					</Nav.Item>
                     </div>
