@@ -1,0 +1,188 @@
+.modal-content  {
+background: none !important;
+border: 1px solid rgba(0,0,0,0);
+}
+.modal-body {
+    background-color: #ffffff
+}
+.logo-modal{
+    display: flex;
+    justify-content: center;
+    
+}
+.google-facebook{
+    display: flex;
+    justify-content: space-between
+    
+}
+.google-button-text {
+    color:#191C1EDB;
+    font-size: 17px;
+}
+.google-button-text > img {
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px;
+}
+@media only screen and (max-width:525px){
+    .google-facebook{
+        flex-direction: column;
+    }
+    .google-facebook > button {
+        margin-bottom: 2rem;
+    }
+}
+#login-modal-title{
+    font-size: 24px;
+    font-weight: bold;
+}
+.link-color {
+    color: rgba(19, 80, 83, 1);
+    cursor: pointer;
+}
+.login-button-google {
+    border: 1px solid #707070;
+    border-radius: 2px;
+    opacity: 1;
+    background-color: #ffffff;
+
+}
+.login-button-google:hover{
+    background-color: #eeeeee;
+    border: 1px solid #707070;
+}
+.login-button-google:focus {
+    outline: 0;
+    background-color: #ffffff;
+   
+}
+.login-button-google:active {
+    outline: 0;
+    border: none;
+    background-color: #eeeeee !important;
+    }
+button#login-button {
+        border: 1px solid #707070;
+        border-radius: 2px;
+        opacity: 1;
+ 
+}
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 576px;
+}
+}
+small#forgot-password {
+    text-align: right;
+}
+.mr-f{
+    margin-right: 10px;
+}
+.clor-black{
+    background-color: #000000;
+}
+.visiblity {
+    position: absolute;
+    right: 8px;
+    top: 40px;
+}
+div#form-group-login-password {
+    position: relative;
+}
+.pos-or {
+    display: flex;
+    justify-content: space-around;
+}
+.border-or > hr {
+    background-color: black;
+}
+.border-or {
+    width: 45%;
+ }
+ .red {
+     color: red;
+ }
+ .merchant-logo{
+    width: 90px;
+    height: 95px;
+    margin-right: 1rem;
+ }
+ p.logo {
+     margin-bottom: 8px !important;
+ }
+ .cancel {
+     margin-bottom: 0rem !important;
+ }
+ .opac {
+    font: normal normal normal 14px/17px Roboto;
+
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FF212166;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color:#ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:  #20E862;;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #20E862;;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .svg-photos {
+cursor: pointer;    
+}
+.nav-path {
+    margin-top: 5px;
+    color: black;
+    padding: .3rem .7rem;
+    
+}

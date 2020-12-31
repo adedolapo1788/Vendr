@@ -1,0 +1,42 @@
+.wrapper{
+  
+    width: 100%;
+    border: 1px solid #d8d3d3;
+    height: 215px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .file-upload{
+  
+      height:200px;
+      width:100%;
+      position:relative;
+      flex-direction: column;
+      display:flex;
+      justify-content:center;
+      align-items: center;  
+  
+      overflow:hidden;
+      transition: all 1s;
+
+      input[type='file']{
+  
+        height:200px;
+        width:200px;
+        position:absolute;
+        top:0;
+        left:0;
+        opacity:0;
+        cursor:pointer;
+  
+      }
+  
+      &:hover{
+  
+        color:#2590EB;
+  
+      }
+    }
+}

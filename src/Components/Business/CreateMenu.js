@@ -1,7 +1,15 @@
 import { Col, Row, Container, Card, Form, Button } from 'react-bootstrap';
 import CurrencySvg from '../../Image/assests/Group 270.svg'
+import SvgPhoto from '../../Image/assests/Group 230.svg'
 //import SideBar from "./Sidebar";
+import '../../styles/upload.scss'
+import { useState } from 'react';
 const CreateMenu =  () => {
+    const [file, showUpload] = useState()
+    const fileUpload = (e) => {
+        const files = e.target.files[0]?.name
+            showUpload(files)
+    }
     return(
         <>
         <div className="main-panel">
@@ -62,9 +70,21 @@ const CreateMenu =  () => {
 						<Form.Group>
                         <label>Upload picture</label>
 							
-							<Form.Control as="textarea" className="change-textarea">
-                            </Form.Control>
-						
+                        <div className="wrapper">
+  <div className="file-upload">
+  {file}
+    <input type="file" onChange={fileUpload}/>
+    <img src={SvgPhoto} className="svg-photos" alt="upload"/>
+        <p className="rf4">Drag and drop, or click to upload 240 x 240px minimum (JPG or PNG file, up to 10 MB)</p>
+  </div>
+  
+  </div>
+      
+                        {/*
+							<Form.File className="change-textarea upload-form">
+                            
+                            </Form.File>
+                        <img src={SvgPhoto}  alt/>*/}
 						</Form.Group>
 					</Col>
                     
