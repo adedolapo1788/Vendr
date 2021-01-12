@@ -130,8 +130,7 @@ top: 8px;
 }
 .merchant-row {
     display: flex;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap;}
 .logo-width{
     width: 206px;
 height: 184px;
@@ -157,4 +156,14 @@ button.p-btn{
 }
 .table-cat{
     display:flex
+}
+.bd{
+    border: 1px solid #ced4da;
+}
+.earn {
+font: normal normal normal 20px/24px Roboto;
+}
+.dash-topic{
+font: normal normal 300 30px/37px Roboto;
+letter-spacing: 0.09px;
 }

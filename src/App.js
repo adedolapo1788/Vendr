@@ -1,5 +1,5 @@
-import React, {useEffect, createRef} from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect, useLocation } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar'
 import Header from './Components/Header'
 import Footer from './Components/Footer/Footer'
@@ -7,36 +7,33 @@ import Landing from './Components/Landing'
 import NavBus from './Components/Business/NavBus'
 import './styles/App.css';
 import FoodMenu from './Components/FoodMenu/FoodMenu';
-import {useDispatch} from 'react-redux';
-import {loadData} from "./store";
+//import {useDispatch} from 'react-redux';
+//import {loadData} from "./store";
 import Error404 from './Components/404'
 import Order from './Components/Order/Order'
 import Success from './Components/FoodMenu/Success'
 import SignupBuss from './Components/Business/SignupBusiness'
-import axios from 'axios'
+//import axios from 'axios'
 import AuthPage from './Components/AuthPage'
 import BusinessLanding from './Components/Business/BusinessLandingPage';
 import Resturant from './Components/FoodMenu/Resturants';
 import Dashboard from './Components/Business/Dashboard'
 import BussAuth from './Components/Business/BussAuth';
+import DriverLanding from './Components/Driver/DriverLanding';
+import DriverBoard from './Components/Driver/DriverDashboard'
 
 function App() {
-  const wrapper = createRef()
-  const path = useLocation()
-{console.log(path)}
-  const dispatch = useDispatch()
-  useEffect(() => {
-    // eslint-disable-next-line
-      const node = wrapper.current
+  /*useEffect(() => {
+    
       const FoodMenuDB = async () => {
         const FoodFetch = await axios({
           method : 'GET',
-          url: 'https://jsonplaceholder.typicode.com/posts'
+          url: ''
         }).then( result => dispatch(loadData(result)))
         .catch(err => console.log(err))
       }
       FoodMenuDB()
-  })
+  })*/
  
   return (
 
@@ -56,13 +53,13 @@ function App() {
        <Footer/>
      </Route>
      <Route exact path="/merchant">
-     <NavBus/>
+     <NavBus nav={true}/>
        <BusinessLanding/>
-       <BussAuth/>
+       <BussAuth label={false}/>
      </Route>
      <Route exact path="/merchant/signup">
-     <NavBus/>
-     <BussAuth/>
+     <NavBus nav={true}/>
+     <BussAuth label={false}/>
        <SignupBuss/>
      </Route>
   <Route exact path="/orders">
@@ -80,7 +77,15 @@ function App() {
   <Route path="/merchant/user">
     <Dashboard/>
     </Route>
-    
+    <Route path="/driver/user">
+    <DriverBoard/>
+  </Route>
+ 
+  <Route exact path="/driver">
+    <NavBus/>
+    <BussAuth label={true}/>
+    <DriverLanding/>
+  </Route>
   <Route exact path="/*">
     <Error404/>
     </Route>

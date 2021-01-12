@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {
 Container, 
 Row,
@@ -16,7 +16,7 @@ import { showMealOrder } from '../../store/actionTypes'
 
 const Status = (prop) => (
 prop === 'Confirmed' || prop === 'Sucessful' ? 'confirmed-cls' :
-prop==='Pending' || prop=='Waiting'? 'pending-cls' :
+prop ==='Pending' || prop === 'Waiting'? 'pending-cls' :
 prop === 'Cancelled' || prop === 'Failed' ? 'warn-cls' :
 ''
 )
@@ -32,10 +32,11 @@ const TableList = (props) =>  {
         <>
       <div className="main-panel">
         <Container fluid className="hurt">
+          
           {menuDetails.order ? (
           <>
           <div>
-                <h3 className="mb-3">{props.h3}</h3>
+                <p className="dashboard-style">{props.h3}</p>
                 <div className="table-cat">
                 <Form className="form-btn w-80">
             <Form.Control placeholder="search orders" className="change-input"/>
@@ -68,7 +69,13 @@ const TableList = (props) =>  {
                           <tr key={key}>
                             {prop.map((prop, key) => {
                               
-                              return <td key={key} className={Status(prop)}>{prop}</td>;
+                              return <td key={key} className={Status(prop)}>{prop.includes('.png') ?
+                               (<img src={prop} alt="avatar" width="21px" height="21px"/>)
+                              : prop
+                              }
+                               
+                               </td>
+                              
                             })}
                             {props.link ? (<td className='link-data' onClick={ViewMenu}>{props.link}</td>) : null}
                           </tr>
